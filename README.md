@@ -113,15 +113,15 @@ sequenceDiagram
     participant Embed as Cached embeddings
     User->>UI: Upload into selected collection
     UI->>Ingest: Validate file and collection
-    Ingest->>Ingest: Extract; reject invalid or duplicate content
+    Ingest->>Ingest: Extract and reject invalid or duplicate content
     Ingest->>Store: Store file under UUID key
     Ingest->>DB: Create pending document
     Ingest-->>UI: Queued
-    Jobs->>DB: Discover job; acquire document lock
+    Jobs->>DB: Discover job and acquire document lock
     Jobs->>Store: Read uploaded file
     Jobs->>Jobs: Revalidate, extract, and chunk
     Jobs->>Embed: Reuse cache or compute vectors
-    Jobs->>DB: Publish chunks; mark indexed; increment revision
+    Jobs->>DB: Publish chunks, mark indexed, and increment revision
     UI->>DB: Refresh status
 ```
 
@@ -630,5 +630,3 @@ rag-generator/
 - [PDF regression verification](docs/pdf-regression-verification.md): earlier extraction/reranking investigation and live checks.
 - [Microgrid evaluation guide](evals/microgrid_dataset.md): ten cases, page references, and scoring caveats.
 - [Project instructions](AGENTS.md): engineering, security, and testing expectations.
-
-Contributions should keep business logic outside Streamlit, preserve collection scope and work limits, include critical regression coverage, and document configuration changes. No license file is currently included; do not assume a redistribution license.
