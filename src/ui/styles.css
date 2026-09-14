@@ -1,0 +1,101 @@
+/* Native Streamlit theme colors keep widgets, menus and canvas in sync.
+   Avoid fixed foreground/background colors so the user's dark theme still works. */
+[data-testid="stMainBlockContainer"] {
+    max-width: 1200px;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+h1, h2, h3 {
+    letter-spacing: -0.025em;
+    font-weight: 650;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.15rem; }
+
+[data-testid="stSidebar"] {
+    border-right: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+}
+
+[data-testid="stSidebar"] h1 {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Keep the native radio inputs and their keyboard interaction. */
+[data-testid="stSidebar"] [role="radiogroup"] {
+    gap: 0.375rem;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] > label {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 0.625rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] > label:hover {
+    background: color-mix(in srgb, var(--text-color) 5%, transparent);
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] > label:has(input:checked) {
+    background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+    border-color: color-mix(in srgb, var(--primary-color) 35%, transparent);
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] > label:has(input:checked) p {
+    font-weight: 600;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] > label:has(input:focus-visible) {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+[data-testid="stButton"] button,
+[data-testid="stFormSubmitButton"] button,
+[data-testid="stPopover"] > button,
+[data-testid="stFileUploader"] button {
+    min-height: 44px;
+    border-radius: 8px;
+}
+
+[data-testid="stButton"] button:focus-visible,
+[data-testid="stFormSubmitButton"] button:focus-visible,
+[data-testid="stPopover"] > button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    border: 1px dashed color-mix(in srgb, var(--text-color) 35%, transparent);
+    border-radius: 10px;
+}
+
+[data-testid="stCaptionContainer"] {
+    opacity: 1;
+    color: color-mix(in srgb, var(--text-color) 78%, var(--background-color));
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+[data-testid="stChatMessage"] { border-radius: 10px; }
+[data-testid="stText"] { line-height: 1.65; }
+
+@media (max-width: 640px) {
+    [data-testid="stMainBlockContainer"] { padding: 1.5rem 1rem 5rem; }
+    h2 { font-size: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-testid="stSidebar"] [role="radiogroup"] > label { transition: none; }
+}

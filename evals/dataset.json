@@ -1,0 +1,100 @@
+[
+  {
+    "id": "hr-01",
+    "question": "How many annual leave days do employees receive?",
+    "category": "direct",
+    "expected_sources": [
+      "leave.md|Annual Leave"
+    ],
+    "reference": "20 days",
+    "answerable": true
+  },
+  {
+    "id": "hr-06",
+    "question": "How many paid sick leave days are available?",
+    "category": "direct",
+    "expected_sources": [
+      "leave.md|Sick Leave"
+    ],
+    "reference": "10 paid",
+    "answerable": true
+  },
+  {
+    "id": "hr-09",
+    "question": "Compare primary and secondary caregiver parental leave.",
+    "category": "multi_chunk",
+    "expected_sources": [
+      "leave.md|Parental Leave"
+    ],
+    "reference": "16 weeks",
+    "answerable": true
+  },
+  {
+    "id": "hr-14",
+    "question": "How many remote days per week are allowed?",
+    "category": "direct",
+    "expected_sources": [
+      "workplace.md|Remote Work"
+    ],
+    "reference": "3 days",
+    "answerable": true
+  },
+  {
+    "id": "hr-16",
+    "question": "What device and connection do I need for remote access?",
+    "category": "cross_document",
+    "expected_sources": [
+      "workplace.md|Remote Work",
+      "security.md|Remote Access"
+    ],
+    "reference": "company VPN",
+    "answerable": true
+  },
+  {
+    "id": "hr-19",
+    "question": "When must I submit expense claims and what evidence is needed?",
+    "category": "direct",
+    "expected_sources": [
+      "expenses.md|Expense Claims"
+    ],
+    "reference": "30 calendar days",
+    "answerable": true
+  },
+  {
+    "id": "hr-22",
+    "question": "When does health coverage start?",
+    "category": "direct",
+    "expected_sources": [
+      "benefits.md|Health Benefits"
+    ],
+    "reference": "first day",
+    "answerable": true
+  },
+  {
+    "id": "hr-25",
+    "question": "What must I do after losing company equipment or discovering data exposure?",
+    "category": "cross_document",
+    "expected_sources": [
+      "benefits.md|Equipment",
+      "security.md|Incident Response"
+    ],
+    "reference": "1 hour",
+    "answerable": true
+  },
+  {
+    "id": "hr-30",
+    "question": "What will my salary increase be next year?",
+    "category": "unanswerable",
+    "expected_sources": [],
+    "reference": "",
+    "answerable": false
+  },
+  {
+    "id": "hr-36",
+    "question": "How much do I get?",
+    "category": "ambiguous",
+    "expected_sources": [],
+    "reference": "",
+    "answerable": false
+  }
+]

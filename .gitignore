@@ -1,0 +1,16 @@
+venv
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.playwright-cli/
+.coverage
+htmlcov/
+data/
+*.egg-info/
+evals/results/*.json
+!evals/results/.gitkeep

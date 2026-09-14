@@ -1,0 +1,82 @@
+[
+  {
+    "id": "microgrid-01",
+    "question": "What is the normal battery state-of-charge range?",
+    "category": "direct",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Normal state of charge: 35% to 90%",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-02",
+    "question": "What should an operator do if battery state of charge falls below 35%?",
+    "category": "conditional_procedure",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "20% to 34% Low reserve Notify on-call technician and verify generator readiness. Below 20% Critical reserve Generator should start automatically. Escalate immediately if it does not.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-03",
+    "question": "When should the backup generator start automatically, and when might it start earlier?",
+    "category": "conditional_procedure",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Automatically at 20% SoC, or earlier when an outage is expected to exceed two hours.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-04",
+    "question": "Who must acknowledge critical alarms, within how long, and who must they call?",
+    "category": "direct",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "The control-room operator must acknowledge them within 10 minutes and call the on-call engineer immediately.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-05",
+    "question": "How often should an operator check battery state of charge in island mode?",
+    "category": "table_lookup",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Confirm critical-load priority and watch SoC every 15 minutes.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-06",
+    "question": "Can an operator open battery cabinets during a thermal alarm, and what should they do instead?",
+    "category": "safety_procedure",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Do not open battery cabinets. Keep personnel away from the BESS enclosure, follow the site emergency plan, and contact the electrical engineer immediately.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-07",
+    "question": "When is telemetry considered stale, and what must be checked before using it for control decisions?",
+    "category": "conditional_procedure",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Treat telemetry older than 15 minutes as stale. Do not make control decisions using stale telemetry without confirming local indicators or contacting the technician.",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-08",
+    "question": "What generator maintenance is required quarterly, and who is responsible?",
+    "category": "table_lookup",
+    "expected_sources": ["microgrid_operations_and_response_guide.pdf|None"],
+    "reference": "Quarterly Run generator under load for 30 minutes and verify automatic transfer Electrical engineer",
+    "answerable": true
+  },
+  {
+    "id": "microgrid-09",
+    "question": "What is the exact purchase price of the backup generator?",
+    "category": "unanswerable",
+    "expected_sources": [],
+    "reference": "The guide does not specify the backup generator's purchase price.",
+    "answerable": false
+  },
+  {
+    "id": "microgrid-10",
+    "question": "How many years is the battery manufacturer's warranty?",
+    "category": "unanswerable",
+    "expected_sources": [],
+    "reference": "The guide does not specify the battery manufacturer's warranty duration.",
+    "answerable": false
+  }
+]
