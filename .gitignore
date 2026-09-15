@@ -14,3 +14,5 @@ data/
 *.egg-info/
 evals/results/*.json
 !evals/results/.gitkeep
+tests
+

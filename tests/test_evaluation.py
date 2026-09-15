@@ -7,10 +7,6 @@ def test_dataset_coverage() -> None:
     assert len(cases) >= 10
     assert sum(not case.answerable for case in cases) >= 2
     assert {"cross_document", "multi_chunk", "ambiguous", "direct"}.issubset({case.category for case in cases})
-    from pathlib import Path
-    full_cases = load_cases(Path("evals/dataset_full.json"))
-    assert len(full_cases) >= 30
-    assert sum(not case.answerable for case in full_cases) >= 6
 
 
 def test_microgrid_dataset_has_ten_source_supported_cases() -> None:

@@ -1,0 +1,83 @@
+{
+  "exported_at_utc": "2026-09-15T02:43:18.491045+00:00",
+  "format": "AI-agent transcript records, version 1",
+  "scope": "Three project sessions containing user prompts, assistant messages, and tool activity.",
+  "sessions": [
+    {
+      "session_id": "01a0a12f-428b-7a32-82e9-24b3b579d03c",
+      "source_filename": "rollout-2026-09-15T00-00-24-01a0a12f-428b-7a32-82e9-24b3b579d03c.jsonl",
+      "source_sha256": "9f599d031cf2a44a49d74249abdb0241b8cab10e4d3c14d29d93ed9495f91db2",
+      "first_record": "2026-09-14T18:30:31.202Z",
+      "last_record": "2026-09-14T19:32:52.086Z",
+      "record_counts": {
+        "user": 2,
+        "assistant": 21,
+        "tool_call": 71,
+        "tool_result": 71
+      },
+      "omitted_runtime_records": {
+        "session_meta": 1,
+        "event_msg": 273,
+        "response_item": 59,
+        "world_state": 2,
+        "turn_context": 2,
+        "token_usage_record": 71,
+        "compacted": 1
+      },
+      "files": {
+        "codex-01a0a12f-428b-7a32-82e9-24b3b579d03c.md": "e91e90bd5ab043027b4161a07f1ce12d87b46ddbc89cf28d6d1f1b4d89ef962c",
+        "codex-01a0a12f-428b-7a32-82e9-24b3b579d03c.jsonl": "833494e0d82c7df7cf742d6aa43a6f7ca5f507c833c35b7426159da1299c5ca5"
+      }
+    },
+    {
+      "session_id": "01a0a165-63b5-7701-8308-f7150ee61900",
+      "source_filename": "rollout-2026-09-15T00-59-31-01a0a165-63b5-7701-8308-f7150ee61900.jsonl",
+      "source_sha256": "38d5c9f41d6280b0008c6f2f65bbf3f2a2bd36ef04d4d1e7ad661847ad70605d",
+      "first_record": "2026-09-14T19:29:34.653Z",
+      "last_record": "2026-09-14T19:33:21.253Z",
+      "record_counts": {
+        "user": 1,
+        "assistant": 2,
+        "tool_call": 8,
+        "tool_result": 8
+      },
+      "omitted_runtime_records": {
+        "session_meta": 1,
+        "event_msg": 34,
+        "response_item": 10,
+        "world_state": 1,
+        "turn_context": 1,
+        "token_usage_record": 8
+      },
+      "files": {
+        "codex-01a0a165-63b5-7701-8308-f7150ee61900.md": "651631d945c57c13aecf52ce022f7ee2db228f178c7fd367b1c803515165807c",
+        "codex-01a0a165-63b5-7701-8308-f7150ee61900.jsonl": "63e9e119ca2f279add49ef6b13c594224dd16473e02dc5179d07a78594c9a726"
+      }
+    },
+    {
+      "session_id": "01a0a1e1-3d81-7653-a682-f37a8f50e138",
+      "source_filename": "rollout-2026-09-15T03-14-48-01a0a1e1-3d81-7653-a682-f37a8f50e138.jsonl",
+      "source_sha256": "16610cff6a077cc8d7c314791fa2761ef5e1a55ef5130d1bb598a1cd9ea0f422",
+      "first_record": "2026-09-14T21:47:11.516Z",
+      "last_record": "2026-09-15T02:43:09.402Z",
+      "record_counts": {
+        "user": 8,
+        "assistant": 25,
+        "tool_call": 58,
+        "tool_result": 57
+      },
+      "omitted_runtime_records": {
+        "session_meta": 1,
+        "event_msg": 253,
+        "response_item": 59,
+        "world_state": 4,
+        "turn_context": 8,
+        "token_usage_record": 64
+      },
+      "files": {
+        "codex-01a0a1e1-3d81-7653-a682-f37a8f50e138.md": "df972a0d48ac7f5573f71b3ecb81aba06bdda69c784d2bf4416b676113d9fb3c",
+        "codex-01a0a1e1-3d81-7653-a682-f37a8f50e138.jsonl": "72a1acf59fd85e276656b63b0ce7e7ec5c23aca2770d4210e0ca51aecc7de440"
+      }
+    }
+  ]
+}

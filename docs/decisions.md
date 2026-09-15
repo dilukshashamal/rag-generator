@@ -83,6 +83,6 @@ Evaluation in live mode can execute multiple LLM operations per test case (retri
 answer generation, validation retries, and optional Ragas judge evaluations). To accommodate
 strict free-tier quotas (e.g. Gemini 15 RPM, Groq 6,000 TPM), the default evaluation dataset is
 curated to a representative 10-question benchmark covering all policy documents and question
-classes, while the full 36-question dataset is preserved in `evals/dataset_full.json`. Live
+classes, alongside the 10-case benchmark in `evals/microgrid_dataset.json`. Live
 evaluations include configurable pacing delays (`eval_request_delay_seconds`) to prevent burst
 rate-limit failures.

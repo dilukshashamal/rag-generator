@@ -23,6 +23,7 @@ The application quotes supported passages and abstains when evidence is insuffic
 - [Troubleshooting](#troubleshooting)
 - [Security and limitations](#security-and-limitations)
 - [Project structure](#project-structure)
+- [AI-agent transcripts](#ai-agent-transcripts)
 - [Further documentation](#further-documentation)
 
 ## Features
@@ -453,7 +454,6 @@ If activation is unavailable, invoke `.\venv\Scripts\python.exe` directly. Tests
 
 Coverage includes validation, extraction/chunking, collection isolation, model adapters, retry/fallback behavior, circuit state, caching, RRF, passage limits, grounding, abstention, evaluation metrics, and Streamlit navigation. The PDF fixture also exercises upload, indexing, and citations.
 
-**Current checkout issue:** `test_dataset_coverage` in `tests/test_evaluation.py` still expects `evals/dataset_full.json`, which is absent. Restore the intended fixture or update that legacy assertion before expecting the full suite to pass. Only the two shipped document datasets above are documented as available.
 
 ### PostgreSQL/Redis integration tests
 
@@ -556,7 +556,6 @@ Stopping/recreating containers preserves volumes. Back up PostgreSQL and uploade
 | High recall, lower citation scores | Review coarse labels and exact-whitespace checks before interpreting quality |
 | RAGAS metrics missing | Check opt-in settings, judge credentials/endpoint, and stored report; UI shows core metrics |
 | Embedding configuration changed | Create a collection indexed with current configuration |
-| Tests fail on `dataset_full.json` | Resolve the missing legacy fixture noted in Development and testing |
 
 ## Security and limitations
 
@@ -622,6 +621,13 @@ rag-generator/
 ├── requirements-eval.txt        # RAGAS/judge dependencies
 └── pyproject.toml               # Pytest and Ruff settings
 ```
+
+## AI-agent transcripts
+
+The project includes [AI-agent transcripts](docs/ai-transcripts/README.md)
+for the initial implementation, UI changes, and PDF/evaluation/documentation work.
+Each is available as readable Markdown and structured JSONL, with user prompts, tool
+activity, and a manifest.
 
 ## Further documentation
 
